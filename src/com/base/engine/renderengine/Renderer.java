@@ -10,10 +10,10 @@ public class Renderer {
         GL11.glClearColor(1, 0, 0, 1);
     }
 
-    public void render(RawModel model) {
-        GL30.glBindVertexArray(model.getVaoID());
+    public void render(RawModel rawModel) {
+        GL30.glBindVertexArray(rawModel.getVaoID());
         GL20.glEnableVertexAttribArray(0);
-        GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, model.getVertexCount());
+        GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, rawModel.getVertexCount());
         GL20.glDisableVertexAttribArray(0);
         GL30.glBindVertexArray(0);
     }
