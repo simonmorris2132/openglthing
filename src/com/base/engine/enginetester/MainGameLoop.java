@@ -28,7 +28,7 @@ public class MainGameLoop {
             -0.5f, 0.5f, 0f
           };
 
-          RawModel model = loader.loadToVAO(vertices);
+        RawModel model = loader.loadToVAO(vertices);
 
         while (!Display.isCloseRequested()) {
             renderer.prepare();
