@@ -51,6 +51,12 @@ public class Loader {
         GL30.glBindVertexArray(0);
     }
 
+    private void bindIndicesBuffer(int[] indices) {
+        int vboID = GL15.glGenBuffers();
+        vbos.add(vboID);
+        GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboID);
+    }
+
     private FloatBuffer storeDataInFloatBuffer(float[] data) {
         FloatBuffer buffer = BufferUtils.createFloatBuffer(data.length);
         buffer.put(data);
